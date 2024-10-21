@@ -1,0 +1,7 @@
+//
+
+@mixin respond($name) {
+  @media only screen and (max-width: $name) {
+    @content;
+  }
+}

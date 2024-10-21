@@ -1,0 +1,25 @@
+//
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+  margin-top: 3rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+tr {
+  cursor: pointer;
+  background-color: rgba($black, 0.023);
+  &:hover {
+    background-color: rgba($black, 0.08);
+  }
+}
+td {
+  padding: 1.5rem 1rem;
+  border-bottom: 0.1rem solid rgba($black, 0.1);
+}

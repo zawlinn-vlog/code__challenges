@@ -1,0 +1,14 @@
+//
+
+.text__white {
+  color: getColor(light-1);
+}
+
+.bg__dark {
+  background-color: getColor(dark-1);
+  border-radius: 0.8rem;
+}
+
+.text__dark-3 {
+  color: darken($light-1, 30%);
+}

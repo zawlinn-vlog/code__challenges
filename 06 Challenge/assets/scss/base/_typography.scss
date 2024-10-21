@@ -1,0 +1,34 @@
+//
+
+.header {
+  &__subtitle {
+    @extend %text__size;
+
+    font-weight: 200;
+    color: getColor(dark-2);
+  }
+
+  &__title {
+    @extend %text__size;
+    color: getColor(dark-1);
+  }
+
+  &__txt {
+    font-size: 1.5rem;
+    min-width: 45%;
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: getColor(dark-2);
+
+    // margin-bottom: 8rem;
+
+    @include media(66.25em) {
+      max-width: 80%;
+    }
+
+    @include media(43.75em) {
+      min-width: 95%;
+    }
+  }
+}
