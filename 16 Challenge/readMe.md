@@ -1,5 +1,17 @@
 # Front-end Style Guide
 
+![Output 01](./assets/design/output%2001.png)
+
+<br />
+
+<hr />
+
+<br />
+
+![Output 02](./assets/design/output%2002.png)
+
+<br />
+
 ## Layout
 
 The designs were created to the following widths:
