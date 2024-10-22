@@ -1,0 +1,31 @@
+//
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+//
+
+$primary: hsl(259, 100%, 65%);
+$secondary: hsl(0, 100%, 67%);
+
+$light-1: hsl(0, 0%, 100%);
+$light-2: hsl(0, 0%, 94%);
+
+$dark-1: hsl(0, 0%, 86%);
+$dark-2: hsl(0, 1%, 44%);
+$dark-3: hsl(0, 0%, 8%);
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "light-1": $light-1,
+  "light-2": $light-2,
+
+  "dark-1": $dark-1,
+  "dark-2": $dark-2,
+  "dark-3": $dark-3,
+);
+
+:root {
+  @each $key, $val in $colors {
+    --color-#{$key}: #{$val};
+  }
+}
