@@ -9,7 +9,7 @@
   background-color: fun.getColor(dark__2);
   padding: 3rem;
   padding-bottom: 5rem;
-  margin-bottom: 6rem;
+
   border-radius: 0.8rem;
 
   @extend %d__flex;
@@ -18,7 +18,21 @@
 
   @include mx.media(40em) {
     width: 95%;
+
+    margin: 0 auto;
+  }
+
+  @supports (-webkit-margin-inline: auto) {
     margin-inline: auto;
+  }
+
+  &__line {
+    // width: 100%;
+
+    &-img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   &__subtitle {
@@ -35,7 +49,7 @@
     // padding-inline: 2rem;
     text-align: center;
     font-size: 2.8rem;
-    line-height: 1.4;
+    line-height: 1.7;
     color: fun.getColor(light);
 
     @include mx.media(25em) {

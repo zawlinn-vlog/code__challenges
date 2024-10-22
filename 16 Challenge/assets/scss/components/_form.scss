@@ -1,1 +1,84 @@
 //
+
+@use "../abstract/variables" as var;
+@use "../abstract/functions" as fun;
+@use "../abstract/mixin" as mx;
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+  border-bottom: 0.1rem solid fun.getColor(dark-1);
+
+  position: relative;
+
+  gap: 2rem;
+
+  @include mx.media(36.13em) {
+    padding-bottom: 7rem;
+    margin-bottom: 5rem;
+    gap: 1rem;
+
+    // justify-content: space-between;
+  }
+
+  & > * {
+    width: 13rem;
+
+    @include mx.media(42.5em) {
+      flex: 1 0 30%;
+    }
+  }
+
+  &__label {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+
+    @include mx.media(42.5em) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__input {
+    padding: 1.3rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    color: fun.getColor(dark-2);
+
+    font-weight: 900;
+    outline: none;
+    border: none;
+
+    border: 0.2rem solid fun.getColor(dark-1);
+
+    transition: all 0.3s;
+
+    &:focus {
+      border: 0.2rem solid fun.getColor(primary);
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.08rem;
+    color: rgba(var.$dark-3, 0.6);
+  }
+
+  &__control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

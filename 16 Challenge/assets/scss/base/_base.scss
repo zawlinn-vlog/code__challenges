@@ -2,6 +2,8 @@
 
 @use "../abstract/variables" as var;
 
+@use "../abstract/mixin" as mx;
+
 *,
 *::before,
 *::after {
@@ -14,7 +16,16 @@ html {
   font-family: Poppins, sans-serif;
   font-size: 75%;
   line-height: 1.5;
-  font-weight: 700;
+  font-weight: 900;
+
+  @include mx.media(90em) {
+    font-size: 62.5%;
+  }
+
+  
+  @include mx.media(36.13em) {
+    font-size: 56.25%;
+  }
 }
 
 body {

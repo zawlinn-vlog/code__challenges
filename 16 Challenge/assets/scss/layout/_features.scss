@@ -1,0 +1,36 @@
+//
+
+@use "../abstract/functions" as fun;
+@use "../abstract/mixin" as mx;
+
+.feature {
+  width: 65rem;
+  padding: 4rem;
+  //   display: inline-block;
+
+  background-color: fun.getColor(light-1);
+  border-radius: 2rem 2rem 25% 2rem;
+
+  @include mx.media(42.5em) {
+    width: 100%;
+    padding: 4rem 3rem;
+    border-radius: 2rem 2rem 20% 2rem;
+  }
+  @include mx.media(25em) {
+    padding: 3rem 1rem;
+  }
+
+  .result {
+    font-size: 6.4rem;
+    font-weight: 900;
+    font-style: italic;
+
+    &__out {
+      color: fun.getColor(primary);
+    }
+
+    @include mx.media(36.13em) {
+      font-size: 13.5vw;
+    }
+  }
+}

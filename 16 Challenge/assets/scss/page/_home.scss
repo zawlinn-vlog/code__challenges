@@ -1,1 +1,25 @@
 //
+
+@use "../abstract/functions" as fun;
+
+@use "../abstract/mixin" as mx;
+
+.wrapper {
+  min-height: 100vh;
+  padding: 3rem;
+  background-color: fun.getColor(light-2);
+
+  display: grid;
+  place-content: center center;
+  gap: 5rem;
+
+  @include mx.media(42.38em) {
+    padding: 2rem;
+  }
+
+  @include mx.media(42.5em) {
+    grid-template-columns: 1fr;
+
+    padding: 1rem;
+  }
+}

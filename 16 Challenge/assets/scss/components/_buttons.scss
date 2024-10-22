@@ -1,1 +1,39 @@
 //
+
+@use "../abstract/functions" as fun;
+@use "../abstract/mixin" as mx;
+
+.btn {
+  &__submit {
+    width: 7rem;
+    height: 7rem;
+    aspect-ratio: 1 /1;
+    border-radius: 50%;
+    border: none;
+    background-color: fun.getColor(primary);
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    transform: translateY(50%);
+    transition: all 0.3s;
+
+    @include mx.media(42.5em) {
+      bottom: 0;
+      left: 50%;
+
+      transform: translate(-50%, 50%);
+    }
+
+    &:hover {
+      background-color: fun.getColor(dark-3);
+    }
+  }
+  &__img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+  }
+}

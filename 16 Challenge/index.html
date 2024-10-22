@@ -21,20 +21,24 @@
 
     <style>
       .attribution {
-        font-size: 11px;
+        font-size: 14px;
+        display: inline-block;
         text-align: center;
+        padding: 0 4rem;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
     </style>
+
+    <script defer src="./assets/js/app.js"></script>
   </head>
   <body>
     <main class="wrapper">
       <div class="feature">
         <!-- INPUT FORM -->
         <form action=" " method="" class="form input__form">
-          <div class="form__control">
+          <div class="form__control mr__1">
             <label for="day" class="form__label">day</label>
             <input
               type="number"
@@ -43,11 +47,12 @@
               min="1"
               max="31"
               placeholder="dd"
-              required
             />
+            <!-- <span class="error__empty">This field is required</span>
+            <span class="error__empty">Must be a valid day</span> -->
           </div>
 
-          <div class="form__control">
+          <div class="form__control mr__1">
             <label for="month" class="form__label">month</label>
             <input
               type="number"
@@ -56,9 +61,11 @@
               min="1"
               max="12"
               placeholder="mm"
-              required
             />
+            <!-- <span class="error__empty">This field is required</span>
+            <span class="error__empty">Must be a valid month</span> -->
           </div>
+
           <div class="form__control">
             <label for="year" class="form__label">year</label>
             <input
@@ -67,23 +74,15 @@
               class="form__input"
               min="1970"
               placeholder="yyyy"
-              required
             />
+            <!-- <span class="error__empty">This field is required</span>
+            <span class="error__empty">Must be a valid year</span> -->
           </div>
+
+          <button type="submit" class="btn btn__submit">
+            <img src="./assets/images/icon-arrow.svg" alt="" class="btn__img" />
+          </button>
         </form>
-
-        <!-- HORIZONTAL SECTION -->
-
-        <div class="horizon">
-          <div class="horizontal__line"></div>
-          <div class="horizontal__icon">
-            <img
-              src="./assets/images/icon-arrow.svg"
-              alt=""
-              class="horizontal__img"
-            />
-          </div>
-        </div>
 
         <!-- RESULT SECTION -->
 
@@ -101,15 +100,15 @@
             <span class="result__txt"> days </span>
           </div>
         </div>
+      </div>
 
-        <!-- FOOTER SECTION -->
+      <!-- FOOTER SECTION -->
 
-        <div class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="#">Zaw Linn - Vlog</a>.
-        </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Zaw Linn - Vlog</a>.
       </div>
     </main>
   </body>
