@@ -1,0 +1,30 @@
+//
+
+@use "../abstract/functions" as fun;
+@use "../abstract/placeholder";
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+
+  &__neo {
+    width: 5rem;
+    aspect-ratio: 1 /1;
+    border-radius: 50%;
+    background-color: fun.getColor(primary);
+
+    @extend %d__grid;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translate(-50%, 45%);
+
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 0 0 2rem fun.getColor(primary);
+    }
+  }
+}

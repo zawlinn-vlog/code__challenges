@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./assets/css/main.min.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 15px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+      }
+      .attribution a {
+        /* color: hsl(228, 45%, 44%); */
+        color: #52ffa8;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="card">
+        <h4 class="card__subtitle mb__small">
+          Advice #112<!-- Advice ID goes here -->
+        </h4>
+        <p class="card__txt mb__medium">
+          <!-- Advice text goes here -->
+          "It is easy to sit up and take notice, what's difficult is getting up
+          and taking action."
+        </p>
+        <picture class="card__line">
+          <source
+            media="(max-width: 35em)"
+            srcset="./assets/images/pattern-divider-mobile.svg"
+          />
+
+          <img
+            src="./assets/images/pattern-divider-desktop.svg"
+            alt="Horizontal Line"
+            class="card__line-img"
+          />
+        </picture>
+
+        <a href="#" class="btn btn__neo btn__animate">
+          <img src="./assets/images/icon-dice.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Zaw Linn - Vlog</a>.
+      </div>
+    </main>
+  </body>
+</html>

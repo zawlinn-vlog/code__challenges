@@ -1,0 +1,14 @@
+//
+
+@use "../abstract/placeholder";
+@use "../abstract/functions" as fun;
+
+.wrapper {
+  max-width: 160rem;
+  margin-inline: auto;
+  min-height: 100vh;
+  // padding-inline: 2rem;
+  background-color: fun.getColor(dark__3);
+
+  @extend %d__grid;
+}

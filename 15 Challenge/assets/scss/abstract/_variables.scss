@@ -1,0 +1,27 @@
+//
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+//
+
+$primary: hsl(150, 100%, 66%);
+
+$dark__1: hsl(217, 19%, 38%);
+$dark__2: hsl(217, 19%, 24%);
+$dark__3: hsl(218, 23%, 16%);
+
+$light: hsl(193, 38%, 86%);
+
+$colors: (
+  "primary": $primary,
+
+  "dark__1": $dark__1,
+  "dark__2": $dark__2,
+  "dark__3": $dark__3,
+  "light": $light,
+);
+
+:root {
+  @each $key, $val in $colors {
+    --color-#{$key}: #{$val};
+  }
+}

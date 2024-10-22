@@ -1,0 +1,13 @@
+//
+
+%d__grid {
+  display: grid !important;
+  place-content: center center;
+}
+
+%d__flex {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

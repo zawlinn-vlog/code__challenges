@@ -1,0 +1,45 @@
+//
+
+@use "../abstract/functions" as fun;
+@use "../abstract/placeholder";
+@use "../abstract/mixin" as mx;
+
+.card {
+  max-width: 50rem;
+  background-color: fun.getColor(dark__2);
+  padding: 3rem;
+  padding-bottom: 5rem;
+  margin-bottom: 6rem;
+  border-radius: 0.8rem;
+
+  @extend %d__flex;
+
+  position: relative;
+
+  @include mx.media(40em) {
+    width: 95%;
+    margin-inline: auto;
+  }
+
+  &__subtitle {
+    font-size: 1.3rem;
+    color: fun.getColor(primary);
+    text-transform: uppercase;
+
+    @include mx.media(25em) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__txt {
+    // padding-inline: 2rem;
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 1.4;
+    color: fun.getColor(light);
+
+    @include mx.media(25em) {
+      font-size: 2.6rem;
+    }
+  }
+}
