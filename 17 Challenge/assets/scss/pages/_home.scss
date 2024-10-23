@@ -1,0 +1,16 @@
+//
+
+@use "../abstract/functions" as fun;
+@use "../abstract/placeholder";
+
+.wrapper {
+  min-height: 100vh;
+  background-color: fun.getColor(light);
+
+  @extend %d__flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  // display: grid;
+  // place-content: center center;
+}
