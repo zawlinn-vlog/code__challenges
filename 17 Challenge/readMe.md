@@ -1,5 +1,15 @@
 # Front-end Style Guide
 
+![Desktop](./assets/design/desktop%2001.png)
+
+<br />
+
+<hr />
+
+</br />
+
+![Mobile](./assets/design/output%20mobile%20active.png)
+
 ## Layout
 
 The designs were created to the following widths:
