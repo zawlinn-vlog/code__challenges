@@ -1,6 +1,7 @@
 //
 
 @use "../abstract/functions" as fun;
+@use "../abstract/mixin" as mx;
 @use "../abstract/placeholder";
 
 .btn {
@@ -10,7 +11,10 @@
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    background-color: #333;
+    background-color: fun.getColor(light);
+
+    position: relative;
+    z-index: 999;
 
     @extend %d__flex;
 
@@ -18,15 +22,24 @@
     // justify-content: center;
     // align-items: center;
 
+    @include mx.media(52.5em) {
+      width: 5rem;
+      height: 5rem;
+    }
+
     &-icon {
       width: 2rem;
       height: 2rem;
-
       transform: translateY(-0.1rem);
+
+      &:hover {
+        stroke: #fff;
+      }
     }
 
     &:hover + .feature__social {
       opacity: 1 !important;
+      visibility: visible;
     }
   }
 }

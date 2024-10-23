@@ -8,11 +8,23 @@
     line-height: 1.45;
     color: fun.getColor(primary);
     margin-bottom: 1.6rem;
+
+    @include mx.media(55.625em) {
+      font-size: 2.6rem;
+    }
   }
 
   &__txt {
     font-size: 1.5rem;
     color: fun.getColor(secondary);
     margin-bottom: 3.2rem;
+
+    @include mx.media(55.625em) {
+      font-size: 1.9rem;
+    }
+
+    @include mx.media(52.5em) {
+      font-size: 2rem;
+    }
   }
 }

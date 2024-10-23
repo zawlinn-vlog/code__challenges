@@ -19,6 +19,14 @@ html {
   @include mx.media(90em) {
     font-size: 62.5%;
   }
+
+  @include mx.media(62em) {
+    font-size: 56.25%;
+  }
+
+  @include mx.media(56em) {
+    font-size: 50%;
+  }
 }
 
 body {
